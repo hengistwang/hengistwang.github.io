@@ -127,7 +127,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://hengistwang.github.io/search/" title="Search">
+                <a href="https://hengistwang.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -145,11 +145,9 @@
         <h1>A incorrigible idealism</h1>
     </header>
     <div class="entry-content">
-        <p>In case I don&rsquo;t see ya, good afternoon, good evening and good night.</p>
-<ul>
+        <ul>
 <li>Emacs/Linux/C/C++&hellip;</li>
-<li>Hiking + Video Games + Rock &rsquo;n&rsquo; Roll + Movies + &hellip;</li>
-<li><a href="127.0.0.1">My Resume</a> (Still not Done it&hellip;)</li>
+<li><a href="127.0.0.1">About me</a></li>
 </ul>
 
     </div>
@@ -158,6 +156,34 @@
 </div>
 
     </footer>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Link Load and Libs reading notes
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Chap I Chap II Preprocessing gcc -E src.c -o src.i This operation did several things.
+processing all the instructions begin with ‘#’, delete all of them except ‘#pragma’, and process the ‘#include’ recursively. delete all comments. add line number and file name identifiers Compile to assembly code
+gcc -S src.i -o src.s # or gcc -S src.c -o src.s # or ccl src.c Assembly to machine code
+as src.s -o src....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-02 00:00:00 +0800 CST'>July 2, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
+  <a class="entry-link" aria-label="post link to Link Load and Libs reading notes" href="https://hengistwang.github.io/posts/1-link-load-libs/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>My Own Gentoo Install Guide
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I. Prepare Disk #disk wipe sgdisk --zap-all /dev/sda #partition disk cfdisk -z /dev/sda mkfs.vfat -F 32 /dev/sda1 mkfs.btrfs/ext4/xfs/.... /dev/sda3 mkswap /dev/sda2 swapon /dev/sda2 #then mount them II. Installing stage3 Download the stage3 from Gento’s website and put it in the /mnt/gentoo
+# unpack it tar xpvf stage3-*.tar.xz --xattrs-include=&#39;*.*&#39; --numeric-owner # get the portage config from my own git repo # and set fstab genfstab -U /mnt/gentoo &gt;&gt; /mnt/gentoo/etc/fstab # then config repos....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-02 00:00:00 +0800 CST'>July 2, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;hengist</footer>
+  <a class="entry-link" aria-label="post link to My Own Gentoo Install Guide" href="https://hengistwang.github.io/posts/2-gentoo-install/"></a>
 </article>
     </main>
     

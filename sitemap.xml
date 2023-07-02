@@ -2,10 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hengistwang.github.io/categories/</loc>
+    <loc>https://hengistwang.github.io/tags/gentoo/</loc>
+    <lastmod>2023-07-02T17:06:33+08:00</lastmod>
   </url><url>
     <loc>https://hengistwang.github.io/</loc>
+    <lastmod>2023-07-02T17:33:22+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/tags/libs/</loc>
+    <lastmod>2023-07-02T17:33:22+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/tags/link/</loc>
+    <lastmod>2023-07-02T17:33:22+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/posts/1-link-load-libs/</loc>
+    <lastmod>2023-07-02T17:33:22+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/tags/linux/</loc>
+    <lastmod>2023-07-02T17:06:33+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/tags/load/</loc>
+    <lastmod>2023-07-02T17:33:22+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/posts/2-gentoo-install/</loc>
+    <lastmod>2023-07-02T17:06:33+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/posts/</loc>
+    <lastmod>2023-07-02T17:33:22+08:00</lastmod>
   </url><url>
     <loc>https://hengistwang.github.io/tags/</loc>
+    <lastmod>2023-07-02T17:33:22+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/archives/</loc>
+  </url><url>
+    <loc>https://hengistwang.github.io/categories/</loc>
+  </url><url>
+    <loc>https://hengistwang.github.io/search/</loc>
   </url>
 </urlset>

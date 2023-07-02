@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Hengist</title>
-    <link>https://hengistwang.github.io/</link>
-    <description>Recent content on Hengist</description>
+    <title>Posts on Hengist</title>
+    <link>https://hengistwang.github.io/posts/</link>
+    <description>Recent content in Posts on Hengist</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 02 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Link Load and Libs reading notes</title>
       <link>https://hengistwang.github.io/posts/1-link-load-libs/</link>
@@ -27,8 +27,6 @@ as src.s -o src.</description>
       <description>I. Prepare Disk #disk wipe sgdisk --zap-all /dev/sda #partition disk cfdisk -z /dev/sda mkfs.vfat -F 32 /dev/sda1 mkfs.btrfs/ext4/xfs/.... /dev/sda3 mkswap /dev/sda2 swapon /dev/sda2 #then mount them II. Installing stage3 Download the stage3 from Gento&amp;rsquo;s website and put it in the /mnt/gentoo
 # unpack it tar xpvf stage3-*.tar.xz --xattrs-include=&amp;#39;*.*&amp;#39; --numeric-owner # get the portage config from my own git repo # and set fstab genfstab -U /mnt/gentoo &amp;gt;&amp;gt; /mnt/gentoo/etc/fstab # then config repos.</description>
     </item>
-    
-    
     
   </channel>
 </rss>
