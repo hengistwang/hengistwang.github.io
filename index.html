@@ -160,6 +160,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>why we need enable_shared_from_this in cpp
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Problem class C : public enable_shared_from_this&lt;C&gt; { public: std::shared_ptr&lt;C&gt; func() { std::shared_ptr&lt;C&gt; local_sp_a(this); return local_sp_a; } }; int main() { C c; auto a = c.func(); return 0; } // Output: // ./a.out // double free or corruption (out) // fish: Job 1, &#39;./a.out&#39; terminated by signal SIGABRT (Abort) Why it is because when a shared_ptr was created ,the control block was build up too, and there are three methods can create control block...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-03 00:00:00 +0800 CST'>July 3, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
+  <a class="entry-link" aria-label="post link to why we need enable_shared_from_this in cpp" href="https://hengistwang.github.io/posts/3-why-we-need-enable_shared_from_this-in-cpp/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Link Load and Libs reading notes
     </h2>
   </header>
