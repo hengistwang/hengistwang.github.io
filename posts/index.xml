@@ -5,7 +5,16 @@
     <link>https://hengistwang.github.io/posts/</link>
     <description>Recent content in Posts on Hengist</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 03 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>why do i use Gentoo</title>
+      <link>https://hengistwang.github.io/posts/4-why-do-i-use-gentoo/</link>
+      <pubDate>Tue, 04 Jul 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://hengistwang.github.io/posts/4-why-do-i-use-gentoo/</guid>
+      <description>After using several Linux distributions, it hard for me to find one suit me well, i been using openSUSE TW for about two years, it is an excellent system, help me and take care of all the miscellaneous. but when i started getting involved with Linux Kernel, i would like to try some interesting features like the musl libc and no-multilib system, and it is easy to customize my own system from kernel to software.</description>
+    </item>
+    
     <item>
       <title>why we need enable_shared_from_this in cpp</title>
       <link>https://hengistwang.github.io/posts/3-why-we-need-enable_shared_from_this-in-cpp/</link>
