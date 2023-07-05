@@ -12,7 +12,7 @@
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0800</pubDate>
       
       <guid>https://hengistwang.github.io/posts/5-build-own-ide-with-emacs/</guid>
-      <description>II am not recommended to build from scratch, there are several community driven configuration framework, like Doom Emacs Spacemacs&amp;hellip; etc. I am highly recommend to use Doom Emacs, it&amp;rsquo;s very easy to install, just follow it&amp;rsquo;s Getting Started Guide After install it, open it and type spc+f+p to open config file, int the init.el ,we can Remove comments to enable some feature(make sure to execute doom sync to install the feature), like cc, python, and so many tools that can help us to do many things.</description>
+      <description>I am not recommended to build from scratch, there are several community driven configuration framework, like Doom Emacs Spacemacs&amp;hellip; etc. I am highly recommend to use Doom Emacs, it&amp;rsquo;s very easy to install, just follow it&amp;rsquo;s Getting Started Guide After install it, open it and type spc+f+p to open config file, int the init.el ,we can Remove comments to enable some feature(make sure to execute doom sync to install the feature), like cc, python, and so many tools that can help us to do many things.</description>
     </item>
     
   </channel>
