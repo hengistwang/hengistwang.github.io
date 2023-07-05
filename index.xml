@@ -5,23 +5,32 @@
     <link>https://hengistwang.github.io/</link>
     <description>Recent content on Hengist</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 04 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>why do i use Gentoo</title>
+      <title>Build IDE with emacs</title>
+      <link>https://hengistwang.github.io/posts/5-build-own-ide-with-emacs/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://hengistwang.github.io/posts/5-build-own-ide-with-emacs/</guid>
+      <description>II am not recommended to build from scratch, there are several community driven configuration framework, like Doom Emacs Spacemacs&amp;hellip; etc. I am highly recommend to use Doom Emacs, it&amp;rsquo;s very easy to install, just follow it&amp;rsquo;s Getting Started Guide After install it, open it and type spc+f+p to open config file, int the init.el ,we can Remove comments to enable some feature(make sure to execute doom sync to install the feature), like cc, python, and so many tools that can help us to do many things.</description>
+    </item>
+    
+    <item>
+      <title>Why do I use Gentoo</title>
       <link>https://hengistwang.github.io/posts/4-why-do-i-use-gentoo/</link>
       <pubDate>Tue, 04 Jul 2023 00:00:00 +0800</pubDate>
       
       <guid>https://hengistwang.github.io/posts/4-why-do-i-use-gentoo/</guid>
-      <description>After using several Linux distributions, it hard for me to find one suit me well, i been using openSUSE TW for about two years, it is an excellent system, help me and take care of all the miscellaneous. but when i started getting involved with Linux Kernel, i would like to try some interesting features like the musl libc and no-multilib system, and it is easy to customize my own system from kernel to software.</description>
+      <description>After using several Linux distributions, it hard for me to find one suit me well, I have been using openSUSE TW for about two years, it is an excellent system, help me and take care of all the miscellaneous. But when I started getting involved with Linux Kernel, I would like to try some interesting features like the musl libc and no-multilib system, and it is easy to customize my own system from kernel to software.</description>
     </item>
     
     <item>
-      <title>why we need enable_shared_from_this in cpp</title>
+      <title>Why we need enable_shared_from_this in cpp</title>
       <link>https://hengistwang.github.io/posts/3-why-we-need-enable_shared_from_this-in-cpp/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0800</pubDate>
       
       <guid>https://hengistwang.github.io/posts/3-why-we-need-enable_shared_from_this-in-cpp/</guid>
-      <description>Problem class C : public enable_shared_from_this&amp;lt;C&amp;gt; { public: std::shared_ptr&amp;lt;C&amp;gt; func() { std::shared_ptr&amp;lt;C&amp;gt; local_sp_a(this); return local_sp_a; } }; int main() { C c; auto a = c.func(); return 0; } // Output: // ./a.out // double free or corruption (out) // fish: Job 1, &amp;#39;./a.out&amp;#39; terminated by signal SIGABRT (Abort) Why it is because when a shared_ptr was created ,the control block was build up too, and there are three methods can create control block</description>
+      <description>Problem class C : public enable_shared_from_this&amp;lt;C&amp;gt; { public: std::shared_ptr&amp;lt;C&amp;gt; func() { std::shared_ptr&amp;lt;C&amp;gt; local_sp_a(this); return local_sp_a; } }; int main() { C c; auto a = c.func(); return 0; } // Output: // ./a.out // double free or corruption (out) // fish: Job 1, &amp;#39;./a.out&amp;#39; terminated by signal SIGABRT (Abort) Why it is because when a shared_ptr was created, the control block was build up too, and there are three methods can create control block</description>
     </item>
     
     <item>
@@ -42,7 +51,7 @@ as src.s -o src.</description>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0800</pubDate>
       
       <guid>https://hengistwang.github.io/posts/2-gentoo-install/</guid>
-      <description>I. Prepare Disk #disk wipe sgdisk --zap-all /dev/sda #partition disk cfdisk -z /dev/sda mkfs.vfat -F 32 /dev/sda1 mkfs.btrfs/ext4/xfs/.... /dev/sda3 mkswap /dev/sda2 swapon /dev/sda2 #then mount them II. Installing stage3 Download the stage3 from Gento&amp;rsquo;s website and put it in the /mnt/gentoo
+      <description>I. Prepare Disk #disk wipe sgdisk --zap-all /dev/sda #partition disk cfdisk -z /dev/sda mkfs.vfat -F 32 /dev/sda1 mkfs.btrfs/ext4/xfs/.... /dev/sda3 mkswap /dev/sda2 swapon /dev/sda2 #then mount them II. Installing stage3 Download the stage3 from Gentoo&amp;rsquo;s website and put it in the /mnt/gentoo
 # unpack it tar xpvf stage3-*.tar.xz --xattrs-include=&amp;#39;*.*&amp;#39; --numeric-owner # get the portage config from my own git repo # and set fstab genfstab -U /mnt/gentoo &amp;gt;&amp;gt; /mnt/gentoo/etc/fstab # then config repos.</description>
     </item>
     
