@@ -5,6 +5,7 @@
     <link>https://hengistwang.github.io/tags/cpp/</link>
     <description>Recent content in cpp on Hengist</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Mon, 03 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why we need enable_shared_from_this in cpp</title>

@@ -156,6 +156,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>name conflict multiple dynamic library
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Here is the Question /*A.c*/ #include &lt;stdio.h&gt; int sayHi() { printf(&#34;Hi, this is AAAAA\n&#34;); return 0; } int sayOut() { sayHi(); printf(&#34;Use this to introduce AAAAA\n&#34;); return 0; } /*B.c*/ #include &lt;stdio.h&gt; int sayHi() { printf(&#34;Hi, this is BBBBB\n&#34;); return 0; } int sayOut() { sayHi(); printf(&#34;Use this to introduce BBBBB\n&#34;); return 0; } #include &lt;stdio.h&gt; extern int sayOut(); int main() { sayOut(); return 0; } # if link A first &gt;gcc test....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0800 CST'>July 6, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;hengist</footer>
+  <a class="entry-link" aria-label="post link to name conflict multiple dynamic library" href="https://hengistwang.github.io/posts/7-name-conflict-multiple-dynamic-library/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Zlib is still alive
     </h2>
   </header>
@@ -201,21 +213,6 @@ loginzlib​2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-03 00:00:00 +0800 CST'>July 3, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
   <a class="entry-link" aria-label="post link to Why we need enable_shared_from_this in cpp" href="https://hengistwang.github.io/posts/3-why-we-need-enable_shared_from_this-in-cpp/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Link Load and Libs reading notes
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Chap I Chap II Preprocessing gcc -E src.c -o src.i This operation did several things.
-processing all the instructions begin with ‘#’, delete all of them except ‘#pragma’, and process the ‘#include’ recursively. delete all comments. add line number and file name identifiers Compile to assembly code
-gcc -S src.i -o src.s # or gcc -S src.c -o src.s # or ccl src.c Assembly to machine code
-as src.s -o src....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-02 00:00:00 +0800 CST'>July 2, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Link Load and Libs reading notes" href="https://hengistwang.github.io/posts/1-link-load-libs/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
