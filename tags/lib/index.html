@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head>
-	<meta name="generator" content="Hugo 0.115.4"><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Hengist</title>
-
+<title>Lib | Hengist</title>
+<meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="Hengist">
-<link rel="canonical" href="https://hengistwang.github.io/">
+<link rel="canonical" href="https://hengistwang.github.io/tags/lib/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://hengistwang.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://hengistwang.github.io/favicon-16x16.png">
@@ -19,8 +18,7 @@
 <link rel="mask-icon" href="https://hengistwang.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://hengistwang.github.io/index.xml">
-<link rel="alternate" type="application/json" href="https://hengistwang.github.io/index.json">
+<link rel="alternate" type="application/rss+xml" href="https://hengistwang.github.io/tags/lib/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,28 +55,15 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Hengist" />
+</noscript><meta property="og:title" content="Lib" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://hengistwang.github.io/" />
+<meta property="og:url" content="https://hengistwang.github.io/tags/lib/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hengist"/>
+<meta name="twitter:title" content="Lib"/>
 <meta name="twitter:description" content=""/>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Hengist",
-  "url": "https://hengistwang.github.io/",
-  "description": "",
-  "thumbnailUrl": "https://hengistwang.github.io/favicon.ico",
-  "sameAs": [
-      
-  ]
-}
-</script>
 </head>
 
 <body class="list" id="top">
@@ -140,93 +125,34 @@
     </nav>
 </header>
 <main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>A incorrigible idealism</h1>
-    </header>
-    <div class="entry-content">
-        <ul>
-<li>Emacs/Linux/C/C++&hellip;</li>
-<li>There is only one heroism in the world: to see the world as it is and to love it.</li>
-<li><a href="127.0.0.1">About me</a></li>
-</ul>
-
-    </div>
-    <footer class="entry-footer">
-        <div class="social-icons">
-</div>
-
-    </footer>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Git via HTTPS
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>It’s always frustrating to use Git because of some wall. I recently read a blog from manateelazycat, he suggests a way to use Git via HTTPS, just need to edit ~/.ssh/config and add the following config in it
-Host github.com Hostname ssh.github.com Port 443 User git Test it
-❯ ssh -T git@github.com Hi &lt;USERNAME&gt;! You&#39;ve successfully authenticated, but GitHub does not provide shell access. Git via HTTPS </p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-18 00:00:00 +0800 CST'>July 18, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Git via HTTPS" href="https://hengistwang.github.io/posts/8-git-via-https/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>name conflict multiple dynamic library
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Here is the Question /*A.c*/ #include &lt;stdio.h&gt; int sayHi() { printf(&#34;Hi, this is AAAAA\n&#34;); return 0; } int sayOut() { sayHi(); printf(&#34;Use this to introduce AAAAA\n&#34;); return 0; } /*B.c*/ #include &lt;stdio.h&gt; int sayHi() { printf(&#34;Hi, this is BBBBB\n&#34;); return 0; } int sayOut() { sayHi(); printf(&#34;Use this to introduce BBBBB\n&#34;); return 0; } #include &lt;stdio.h&gt; extern int sayOut(); int main() { sayOut(); return 0; } # if link A first &gt;gcc test....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0800 CST'>July 6, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to name conflict multiple dynamic library" href="https://hengistwang.github.io/posts/7-name-conflict-multiple-dynamic-library/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Zlib is still alive
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>as far as we know, zlib was forced to shut down by the USA government. However, it still remains available on the dark web, we can visit it through the tor-browser, and its address is posted on the Wikipedia, Here is the address:
-loginzlib​2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0800 CST'>July 6, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Zlib is still alive" href="https://hengistwang.github.io/posts/6-zlib-is-still-alive/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Build IDE with emacs
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I am not recommended to build from scratch, there are several community driven configuration framework, like Doom Emacs Spacemacs… etc. I am highly recommend to use Doom Emacs, it’s very easy to install, just follow it’s Getting Started Guide After install it, open it and type spc&#43;f&#43;p to open config file, int the init.el ,we can Remove comments to enable some feature(make sure to execute doom sync to install the feature), like cc, python, and so many tools that can help us to do many things....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-05 00:00:00 +0800 CST'>July 5, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Build IDE with emacs" href="https://hengistwang.github.io/posts/5-build-own-ide-with-emacs/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Why do I use Gentoo
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>After using several Linux distributions, it hard for me to find one suit me well, I have been using openSUSE TW for about two years, it is an excellent system, help me and take care of all the miscellaneous. But when I started getting involved with Linux Kernel, I would like to try some interesting features like the musl libc and no-multilib system, and it is easy to customize my own system from kernel to software....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-04 00:00:00 +0800 CST'>July 4, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Why do I use Gentoo" href="https://hengistwang.github.io/posts/4-why-do-i-use-gentoo/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://hengistwang.github.io/page/2/">Next&nbsp;&nbsp;»
+<header class="page-header"><div class="breadcrumbs"><a href="https://hengistwang.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://hengistwang.github.io/tags/">Tags</a></div>
+  <h1>
+    Lib
+    <a href="/tags/lib/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
     </a>
-  </nav>
-</footer>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Link Load and Libs reading notes
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Chap I Chap II Preprocessing gcc -E src.c -o src.i This operation did several things.
+processing all the instructions begin with ‘#’, delete all of them except ‘#pragma’, and process the ‘#include’ recursively. delete all comments. add line number and file name identifiers Compile to assembly code
+gcc -S src.i -o src.s # or gcc -S src.c -o src.s # or ccl src.c Assembly to machine code
+as src.s -o src....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-02 00:00:00 +0800 CST'>July 2, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
+  <a class="entry-link" aria-label="post link to Link Load and Libs reading notes" href="https://hengistwang.github.io/posts/1-link-load-libs/"></a>
+</article>
     </main>
     
 <footer class="footer">

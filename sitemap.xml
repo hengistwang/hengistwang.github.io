@@ -2,23 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hengistwang.github.io/tags/git/</loc>
+    <lastmod>2023-07-18T22:58:37+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/posts/8-git-via-https/</loc>
+    <lastmod>2023-07-18T22:58:37+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/</loc>
+    <lastmod>2023-07-18T22:58:37+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/posts/</loc>
+    <lastmod>2023-07-18T22:58:37+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/tags/proxy/</loc>
+    <lastmod>2023-07-18T22:58:37+08:00</lastmod>
+  </url><url>
+    <loc>https://hengistwang.github.io/tags/</loc>
+    <lastmod>2023-07-18T22:58:37+08:00</lastmod>
+  </url><url>
     <loc>https://hengistwang.github.io/tags/books/</loc>
     <lastmod>2023-07-06T00:25:09+08:00</lastmod>
   </url><url>
-    <loc>https://hengistwang.github.io/</loc>
-    <lastmod>2023-07-17T23:42:24+08:00</lastmod>
-  </url><url>
     <loc>https://hengistwang.github.io/tags/link/</loc>
-    <lastmod>2023-07-17T23:42:24+08:00</lastmod>
+    <lastmod>2023-07-18T22:49:00+08:00</lastmod>
   </url><url>
     <loc>https://hengistwang.github.io/posts/7-name-conflict-multiple-dynamic-library/</loc>
-    <lastmod>2023-07-17T23:42:24+08:00</lastmod>
-  </url><url>
-    <loc>https://hengistwang.github.io/posts/</loc>
-    <lastmod>2023-07-17T23:42:24+08:00</lastmod>
-  </url><url>
-    <loc>https://hengistwang.github.io/tags/</loc>
-    <lastmod>2023-07-17T23:42:24+08:00</lastmod>
+    <lastmod>2023-07-18T22:42:25+08:00</lastmod>
   </url><url>
     <loc>https://hengistwang.github.io/posts/6-zlib-is-still-alive/</loc>
     <lastmod>2023-07-06T00:25:09+08:00</lastmod>
@@ -44,14 +53,14 @@
     <loc>https://hengistwang.github.io/posts/3-why-we-need-enable_shared_from_this-in-cpp/</loc>
     <lastmod>2023-07-05T23:27:23+08:00</lastmod>
   </url><url>
-    <loc>https://hengistwang.github.io/tags/libs/</loc>
-    <lastmod>2023-07-04T23:56:55+08:00</lastmod>
+    <loc>https://hengistwang.github.io/tags/lib/</loc>
+    <lastmod>2023-07-18T22:49:00+08:00</lastmod>
   </url><url>
     <loc>https://hengistwang.github.io/posts/1-link-load-libs/</loc>
-    <lastmod>2023-07-04T23:56:55+08:00</lastmod>
+    <lastmod>2023-07-18T22:49:00+08:00</lastmod>
   </url><url>
     <loc>https://hengistwang.github.io/tags/load/</loc>
-    <lastmod>2023-07-04T23:56:55+08:00</lastmod>
+    <lastmod>2023-07-18T22:49:00+08:00</lastmod>
   </url><url>
     <loc>https://hengistwang.github.io/posts/2-gentoo-install/</loc>
     <lastmod>2023-07-05T22:33:26+08:00</lastmod>

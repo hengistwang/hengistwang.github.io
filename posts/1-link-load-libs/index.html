@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Link Load and Libs reading notes | Hengist</title>
-<meta name="keywords" content="Link, Load, Libs">
+<meta name="keywords" content="Link, Load, Lib">
 <meta name="description" content="Chap I Chap II Preprocessing gcc -E src.c -o src.i This operation did several things.
 processing all the instructions begin with &lsquo;#&rsquo;, delete all of them except &lsquo;#pragma&rsquo;, and process the &lsquo;#include&rsquo; recursively. delete all comments. add line number and file name identifiers Compile to assembly code
 gcc -S src.i -o src.s # or gcc -S src.c -o src.s # or ccl src.c Assembly to machine code
@@ -67,7 +67,7 @@ as src.s -o src." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hengistwang.github.io/posts/1-link-load-libs/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-07-02T00:00:00+08:00" />
-<meta property="article:modified_time" content="2023-07-04T23:56:55+08:00" />
+<meta property="article:modified_time" content="2023-07-18T22:49:00+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Link Load and Libs reading notes"/>
@@ -105,13 +105,13 @@ as src.s -o src."/>
   "name": "Link Load and Libs reading notes",
   "description": "Chap I Chap II Preprocessing gcc -E src.c -o src.i This operation did several things.\nprocessing all the instructions begin with \u0026lsquo;#\u0026rsquo;, delete all of them except \u0026lsquo;#pragma\u0026rsquo;, and process the \u0026lsquo;#include\u0026rsquo; recursively. delete all comments. add line number and file name identifiers Compile to assembly code\ngcc -S src.i -o src.s # or gcc -S src.c -o src.s # or ccl src.c Assembly to machine code\nas src.s -o src.",
   "keywords": [
-    "Link", "Load", "Libs"
+    "Link", "Load", "Lib"
   ],
   "articleBody": "Chap I Chap II Preprocessing gcc -E src.c -o src.i This operation did several things.\nprocessing all the instructions begin with ‘#’, delete all of them except ‘#pragma’, and process the ‘#include’ recursively. delete all comments. add line number and file name identifiers Compile to assembly code\ngcc -S src.i -o src.s # or gcc -S src.c -o src.s # or ccl src.c Assembly to machine code\nas src.s -o src.o # or gcc -c src.s -o src.o # or gcc -c src.c -o src.o Link to executable program\nld src.o ......... *.o Chap III get file type\n$ file /bin/bash /bin/bash: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, stripped $ file librt.so.1 librt.so.1: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, for GNU/Linux 3.2.0, stripped Some Segments\nint printf(const char *, ...); int global_init_var = 0x11; int global_uninit_var; void func(int i) { printf(\"%d\\n\", i); } int main(void) { static int static_var = 0x22; static int static_var2; int a = 1; int b; func(static_var + static_var2 + a + b); return a; } ",
   "wordCount" : "186",
   "inLanguage": "en",
   "datePublished": "2023-07-02T00:00:00+08:00",
-  "dateModified": "2023-07-04T23:56:55+08:00",
+  "dateModified": "2023-07-18T22:49:00+08:00",
   "author":[{
     "@type": "Person",
     "name": "hengist"
@@ -287,7 +287,7 @@ as src.s -o src."/>
     <ul class="post-tags">
       <li><a href="https://hengistwang.github.io/tags/link/">Link</a></li>
       <li><a href="https://hengistwang.github.io/tags/load/">Load</a></li>
-      <li><a href="https://hengistwang.github.io/tags/libs/">Libs</a></li>
+      <li><a href="https://hengistwang.github.io/tags/lib/">Lib</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://hengistwang.github.io/posts/3-why-we-need-enable_shared_from_this-in-cpp/">
