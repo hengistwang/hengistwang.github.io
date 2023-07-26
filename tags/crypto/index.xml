@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>crypto on Hengist</title>
+    <link>https://hengistwang.github.io/tags/crypto/</link>
+    <description>Recent content in crypto on Hengist</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 24 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cryptography</title>
+      <link>https://hengistwang.github.io/posts/9-cryptography/</link>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://hengistwang.github.io/posts/9-cryptography/</guid>
+      <description>common sense there are five solution to solve unser problems
+symmetric cryptography public-key cryptography hash Message Authentication Code Digital Signature threat speciality solution eavesdrop Confidentiality 1 &amp;amp; 2 falsity Integrity 3 &amp;amp; 4 &amp;amp; 5 disguise Authenticity 4 &amp;amp; 5 denial Nonrepudiation 5 shoule use public crypto algorithm, instead of private crypto algorithm
+cryptography in history caesar cipher just brute-force attack
+#include &amp;lt;cctype&amp;gt; #include &amp;lt;iostream&amp;gt; using namespace std; void func(string s) { for (int i = 0; i &amp;lt; 26; ++i) { string temp(s); for (auto &amp;amp;c : temp) { c = tolower(c); c = ((c + i) - 97) % 26 + 97; } cout &amp;lt;&amp;lt; temp &amp;lt;&amp;lt; endl; } } int main() { string s; cin &amp;gt;&amp;gt; s; func(s); } simple substitution cipher Letter_frequency</description>
+    </item>
+    
+  </channel>
+</rss>

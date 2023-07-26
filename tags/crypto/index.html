@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Posts | Hengist</title>
+<title>crypto | Hengist</title>
 <meta name="keywords" content="">
-<meta name="description" content="Posts - Hengist">
+<meta name="description" content="">
 <meta name="author" content="Hengist">
-<link rel="canonical" href="https://hengistwang.github.io/posts/">
+<link rel="canonical" href="https://hengistwang.github.io/tags/crypto/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://hengistwang.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://hengistwang.github.io/favicon-16x16.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="https://hengistwang.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://hengistwang.github.io/posts/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://hengistwang.github.io/tags/crypto/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,30 +55,15 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Posts" />
+</noscript><meta property="og:title" content="crypto" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://hengistwang.github.io/posts/" />
+<meta property="og:url" content="https://hengistwang.github.io/tags/crypto/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:title" content="crypto"/>
 <meta name="twitter:description" content=""/>
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://hengistwang.github.io/posts/"
-    }
-  ]
-}
-</script>
 </head>
 
 <body class="list" id="top">
@@ -140,10 +125,10 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://hengistwang.github.io/">Home</a></div>
+<header class="page-header"><div class="breadcrumbs"><a href="https://hengistwang.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://hengistwang.github.io/tags/">Tags</a></div>
   <h1>
-    Posts
-    <a href="/posts/index.xml" title="RSS" aria-label="RSS">
+    crypto
+    <a href="/tags/crypto/index.xml" title="RSS" aria-label="RSS">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" height="23">
         <path d="M4 11a9 9 0 0 1 9 9" />
@@ -154,7 +139,7 @@
   </h1>
 </header>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
     <h2>cryptography
     </h2>
@@ -168,63 +153,6 @@ cryptography in history caesar cipher just brute-force attack
   <footer class="entry-footer"><span title='2023-07-24 00:00:00 +0800 CST'>July 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
   <a class="entry-link" aria-label="post link to cryptography" href="https://hengistwang.github.io/posts/9-cryptography/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Git via HTTPS
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>It’s always frustrating to use Git because of some wall. I recently read a blog from manateelazycat, he suggests a way to use Git via HTTPS, just need to edit ~/.ssh/config and add the following config in it
-Host github.com Hostname ssh.github.com Port 443 User git Test it
-❯ ssh -T git@github.com Hi &lt;USERNAME&gt;! You&#39;ve successfully authenticated, but GitHub does not provide shell access. Git via HTTPS </p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-18 00:00:00 +0800 CST'>July 18, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Git via HTTPS" href="https://hengistwang.github.io/posts/8-git-via-https/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>name conflict multiple dynamic library
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Here is the Question /*A.c*/ #include &lt;stdio.h&gt; int sayHi() { printf(&#34;Hi, this is AAAAA\n&#34;); return 0; } int sayOut() { sayHi(); printf(&#34;Use this to introduce AAAAA\n&#34;); return 0; } /*B.c*/ #include &lt;stdio.h&gt; int sayHi() { printf(&#34;Hi, this is BBBBB\n&#34;); return 0; } int sayOut() { sayHi(); printf(&#34;Use this to introduce BBBBB\n&#34;); return 0; } #include &lt;stdio.h&gt; extern int sayOut(); int main() { sayOut(); return 0; } # if link A first &gt;gcc test....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0800 CST'>July 6, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to name conflict multiple dynamic library" href="https://hengistwang.github.io/posts/7-name-conflict-multiple-dynamic-library/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Zlib is still alive
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>as far as we know, zlib was forced to shut down by the USA government. However, it still remains available on the dark web, we can visit it through the tor-browser, and its address is posted on the Wikipedia, Here is the address:
-loginzlib​2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0800 CST'>July 6, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Zlib is still alive" href="https://hengistwang.github.io/posts/6-zlib-is-still-alive/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Build IDE with emacs
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I am not recommended to build from scratch, there are several community driven configuration framework, like Doom Emacs Spacemacs… etc. I am highly recommend to use Doom Emacs, it’s very easy to install, just follow it’s Getting Started Guide After install it, open it and type spc&#43;f&#43;p to open config file, int the init.el ,we can Remove comments to enable some feature(make sure to execute doom sync to install the feature), like cc, python, and so many tools that can help us to do many things....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-05 00:00:00 +0800 CST'>July 5, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Build IDE with emacs" href="https://hengistwang.github.io/posts/5-build-own-ide-with-emacs/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://hengistwang.github.io/posts/page/2/">Next&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
     </main>
     
 <footer class="footer">
