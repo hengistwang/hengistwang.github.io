@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>C on Hengist</title>
+    <link>https://hengistwang.github.io/tags/c/</link>
+    <description>Recent content in C on Hengist</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>one bug I encountered and some thoughts</title>
+      <link>https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/</link>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/</guid>
+      <description>I met a bug recently, it&amp;rsquo;s because I didn&amp;rsquo;t notice the return value of a system call, and use it directly, sadly the compiler not be able to identify this kind problem, until I run it, I notice the program will never enter one condition.
+finally I found the getenv system call returns char* and I compare it with a string in C++, so this will not equal forever.
+This reminds me a book called Algorithms + Data Structures = Programs.</description>
+    </item>
+    
+  </channel>
+</rss>

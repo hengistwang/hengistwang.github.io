@@ -156,6 +156,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>one bug I encountered and some thoughts
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I met a bug recently, it’s because I didn’t notice the return value of a system call, and use it directly, sadly the compiler not be able to identify this kind problem, until I run it, I notice the program will never enter one condition.
+finally I found the getenv system call returns char* and I compare it with a string in C&#43;&#43;, so this will not equal forever.
+This reminds me a book called Algorithms &#43; Data Structures = Programs....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-30 00:00:00 +0800 CST'>July 30, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
+  <a class="entry-link" aria-label="post link to one bug I encountered and some thoughts" href="https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Default value of function
     </h2>
   </header>
@@ -177,7 +191,7 @@ symmetric cryptography public-key cryptography hash Message Authentication Code 
 cryptography in history caesar cipher just brute-force attack
 #include &lt;cctype&gt; #include &lt;iostream&gt; using namespace std; void func(string s) { for (int i = 0; i &lt; 26; &#43;&#43;i) { string temp(s); for (auto &amp;c : temp) { c = tolower(c); c = ((c &#43; i) - 97) % 26 &#43; 97; } cout &lt;&lt; temp &lt;&lt; endl; } } int main() { string s; cin &gt;&gt; s; func(s); } simple substitution cipher Letter_frequency...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-07-24 00:00:00 +0800 CST'>July 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
+  <footer class="entry-footer"><span title='2023-07-24 00:00:00 +0800 CST'>July 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;hengist</footer>
   <a class="entry-link" aria-label="post link to cryptography" href="https://hengistwang.github.io/posts/9-cryptography/"></a>
 </article>
 
@@ -205,19 +219,6 @@ Host github.com Hostname ssh.github.com Port 443 User git Test it
   </div>
   <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0800 CST'>July 6, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;hengist</footer>
   <a class="entry-link" aria-label="post link to name conflict multiple dynamic library" href="https://hengistwang.github.io/posts/7-name-conflict-multiple-dynamic-library/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Zlib is still alive
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>as far as we know, zlib was forced to shut down by the USA government. However, it still remains available on the dark web, we can visit it through the tor-browser, and its address is posted on the Wikipedia, Here is the address:
-loginzlib​2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0800 CST'>July 6, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Zlib is still alive" href="https://hengistwang.github.io/posts/6-zlib-is-still-alive/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
