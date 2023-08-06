@@ -5,13 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>one bug I encountered and some thoughts | Hengist</title>
-<meta name="keywords" content="C, C&#43;&#43;">
-<meta name="description" content="I met a bug recently, it&rsquo;s because I didn&rsquo;t notice the return value of a system call, and use it directly, sadly the compiler not be able to identify this kind problem, until I run it, I notice the program will never enter one condition.
-finally I found the getenv system call returns char* and I compare it with a string in C&#43;&#43;, so this will not equal forever.
-This reminds me a book called Algorithms &#43; Data Structures = Programs.">
+<title>sicp notes | Hengist</title>
+<meta name="keywords" content="scheme, sicp">
+<meta name="description" content="At first this book talk about elements of programming is interesting
+primitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it&rsquo;s interesting name.
+this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential.">
 <meta name="author" content="hengist">
-<link rel="canonical" href="https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/">
+<link rel="canonical" href="https://hengistwang.github.io/posts/12-sicp-notes/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -58,20 +58,20 @@ This reminds me a book called Algorithms &#43; Data Structures = Programs.">
         }
 
     </style>
-</noscript><meta property="og:title" content="one bug I encountered and some thoughts" />
-<meta property="og:description" content="I met a bug recently, it&rsquo;s because I didn&rsquo;t notice the return value of a system call, and use it directly, sadly the compiler not be able to identify this kind problem, until I run it, I notice the program will never enter one condition.
-finally I found the getenv system call returns char* and I compare it with a string in C&#43;&#43;, so this will not equal forever.
-This reminds me a book called Algorithms &#43; Data Structures = Programs." />
+</noscript><meta property="og:title" content="sicp notes" />
+<meta property="og:description" content="At first this book talk about elements of programming is interesting
+primitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it&rsquo;s interesting name.
+this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-07-30T00:00:00+08:00" />
-<meta property="article:modified_time" content="2023-07-30T21:21:08+08:00" />
+<meta property="og:url" content="https://hengistwang.github.io/posts/12-sicp-notes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-06T00:00:00+08:00" />
+<meta property="article:modified_time" content="2023-08-06T22:17:10+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="one bug I encountered and some thoughts"/>
-<meta name="twitter:description" content="I met a bug recently, it&rsquo;s because I didn&rsquo;t notice the return value of a system call, and use it directly, sadly the compiler not be able to identify this kind problem, until I run it, I notice the program will never enter one condition.
-finally I found the getenv system call returns char* and I compare it with a string in C&#43;&#43;, so this will not equal forever.
-This reminds me a book called Algorithms &#43; Data Structures = Programs."/>
+<meta name="twitter:title" content="sicp notes"/>
+<meta name="twitter:description" content="At first this book talk about elements of programming is interesting
+primitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it&rsquo;s interesting name.
+this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential."/>
 
 
 <script type="application/ld+json">
@@ -88,8 +88,8 @@ This reminds me a book called Algorithms &#43; Data Structures = Programs."/>
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "one bug I encountered and some thoughts",
-      "item": "https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/"
+      "name": "sicp notes",
+      "item": "https://hengistwang.github.io/posts/12-sicp-notes/"
     }
   ]
 }
@@ -98,24 +98,24 @@ This reminds me a book called Algorithms &#43; Data Structures = Programs."/>
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "one bug I encountered and some thoughts",
-  "name": "one bug I encountered and some thoughts",
-  "description": "I met a bug recently, it\u0026rsquo;s because I didn\u0026rsquo;t notice the return value of a system call, and use it directly, sadly the compiler not be able to identify this kind problem, until I run it, I notice the program will never enter one condition.\nfinally I found the getenv system call returns char* and I compare it with a string in C++, so this will not equal forever.\nThis reminds me a book called Algorithms + Data Structures = Programs.",
+  "headline": "sicp notes",
+  "name": "sicp notes",
+  "description": "At first this book talk about elements of programming is interesting\nprimitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it\u0026rsquo;s interesting name.\nthis language use prefix notation like this (+ 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential.",
   "keywords": [
-    "C", "C++"
+    "scheme", "sicp"
   ],
-  "articleBody": "I met a bug recently, it’s because I didn’t notice the return value of a system call, and use it directly, sadly the compiler not be able to identify this kind problem, until I run it, I notice the program will never enter one condition.\nfinally I found the getenv system call returns char* and I compare it with a string in C++, so this will not equal forever.\nThis reminds me a book called Algorithms + Data Structures = Programs. I must know what data structure I manipulated with. Under this promise, I will write good and correct programs. So deal with function input well is a good habit with doubt.\n",
-  "wordCount" : "112",
+  "articleBody": "At first this book talk about elements of programming is interesting\nprimitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it’s interesting name.\nthis language use prefix notation like this (+ 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential. a good question asked at the end of first class, what's the difference between the following two expressions (define a (* 5 5 )) (define (b) (* 5 5)) a ==\u003e 25 (a) ==\u003e Error: call of non-procedure: 25 b ==\u003e #",
+  "wordCount" : "149",
   "inLanguage": "en",
-  "datePublished": "2023-07-30T00:00:00+08:00",
-  "dateModified": "2023-07-30T21:21:08+08:00",
+  "datePublished": "2023-08-06T00:00:00+08:00",
+  "dateModified": "2023-08-06T22:17:10+08:00",
   "author":[{
     "@type": "Person",
     "name": "hengist"
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/"
+    "@id": "https://hengistwang.github.io/posts/12-sicp-notes/"
   },
   "publisher": {
     "@type": "Organization",
@@ -193,35 +193,53 @@ This reminds me a book called Algorithms &#43; Data Structures = Programs."/>
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://hengistwang.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://hengistwang.github.io/posts/">Posts</a></div>
     <h1 class="post-title">
-      one bug I encountered and some thoughts
+      sicp notes
     </h1>
-    <div class="post-meta"><span title='2023-07-30 00:00:00 +0800 CST'>July 30, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist
+    <div class="post-meta"><span title='2023-08-06 00:00:00 +0800 CST'>August 6, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist
 
 </div>
   </header> 
 
-  <div class="post-content"><p>I met a bug recently, it&rsquo;s because I didn&rsquo;t notice the return value of a system call, and use it directly, sadly the compiler not be able to identify this kind problem, until I run it, I notice the program will never enter one condition.</p>
-<p>finally I found the getenv system call returns char* and I compare it with a string in C++, so this will not equal forever.</p>
-<p>This reminds me a book called Algorithms + Data Structures = Programs. I must know what data structure I manipulated with. Under this promise, I will write good and correct programs. So deal with function input well is a good habit with doubt.</p>
-
+  <div class="post-content"><p>At first this book talk about elements of programming is interesting</p>
+<ul>
+<li>primitive expressions</li>
+<li>means of combination</li>
+<li>means of abstraction</li>
+</ul>
+<p>in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it&rsquo;s interesting name.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl"><span class="nv">this</span> <span class="nv">language</span> <span class="nv">use</span> <span class="nv">prefix</span> <span class="nv">notation</span> <span class="nv">like</span> <span class="nv">this</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">name</span> <span class="nv">something</span> <span class="nv">like</span> <span class="nv">value</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">define </span><span class="nv">size</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">this</span> <span class="nv">associate</span> <span class="nv">the</span> <span class="nv">value</span> <span class="mi">2</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">name</span> <span class="nv">size</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">define </span><span class="nv">procedure</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">suqare</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nv">or</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">define </span><span class="nv">square</span> <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nv">this</span> <span class="nv">is</span> <span class="nv">some</span> <span class="nv">kind</span> <span class="nv">of</span> <span class="nv">syntactic</span> <span class="nv">sugar,</span> <span class="nv">but</span> <span class="nv">the</span> <span class="k">lambda </span><span class="nv">type</span> <span class="nv">is</span> <span class="nv">more</span> <span class="nv">essential</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">a</span> <span class="nv">good</span> <span class="nv">question</span> <span class="nv">asked</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">end</span> <span class="nv">of</span> <span class="nv">first</span> <span class="nv">class,</span> <span class="nv">what</span><span class="ss">&#39;s</span> <span class="nv">the</span> <span class="nv">difference</span> <span class="nv">between</span> <span class="nv">the</span> <span class="nv">following</span> <span class="nv">two</span> <span class="nv">expressions</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">define </span><span class="nv">a</span> <span class="p">(</span><span class="nb">* </span><span class="mi">5</span> <span class="mi">5</span> <span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">b</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="mi">5</span> <span class="mi">5</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"> <span class="nv">a</span>  <span class="nv">==&gt;</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">a</span><span class="p">)</span> <span class="nv">==&gt;</span> <span class="nv">Error:</span> <span class="nv">call</span> <span class="nv">of</span> <span class="nv">non-procedure:</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl"> <span class="nv">b</span>  <span class="nv">==&gt;</span> <span class="o">#</span><span class="nv">&lt;procedure</span> <span class="p">(</span><span class="nf">b</span><span class="p">)</span><span class="nv">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">b</span><span class="p">)</span> <span class="nv">==&gt;</span> <span class="mi">25</span>
+</span></span></code></pre></div>
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://hengistwang.github.io/tags/c/">C</a></li>
-      <li><a href="https://hengistwang.github.io/tags/c&#43;&#43;/">C&#43;&#43;</a></li>
+      <li><a href="https://hengistwang.github.io/tags/scheme/">scheme</a></li>
+      <li><a href="https://hengistwang.github.io/tags/sicp/">sicp</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://hengistwang.github.io/posts/12-sicp-notes/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>sicp notes</span>
-  </a>
-  <a class="next" href="https://hengistwang.github.io/posts/10-default-value-of-function/">
+  <a class="next" href="https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/">
     <span class="title">Next »</span>
     <br>
-    <span>Default value of function</span>
+    <span>one bug I encountered and some thoughts</span>
   </a>
 </nav>
 
