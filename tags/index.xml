@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Hengist</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Sep 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://hengistwang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>memcached</title>
+      <link>https://hengistwang.github.io/tags/memcached/</link>
+      <pubDate>Sun, 17 Sep 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://hengistwang.github.io/tags/memcached/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redis</title>
+      <link>https://hengistwang.github.io/tags/redis/</link>
+      <pubDate>Sun, 17 Sep 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://hengistwang.github.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>scheme</title>
       <link>https://hengistwang.github.io/tags/scheme/</link>
@@ -26,7 +44,7 @@
     </item>
     
     <item>
-      <title>C</title>
+      <title>c</title>
       <link>https://hengistwang.github.io/tags/c/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0800</pubDate>
       
@@ -35,7 +53,7 @@
     </item>
     
     <item>
-      <title>C&#43;&#43;</title>
+      <title>c&#43;&#43;</title>
       <link>https://hengistwang.github.io/tags/c&#43;&#43;/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0800</pubDate>
       
@@ -53,7 +71,7 @@
     </item>
     
     <item>
-      <title>Git</title>
+      <title>git</title>
       <link>https://hengistwang.github.io/tags/git/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0800</pubDate>
       
@@ -62,7 +80,7 @@
     </item>
     
     <item>
-      <title>Proxy</title>
+      <title>proxy</title>
       <link>https://hengistwang.github.io/tags/proxy/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0800</pubDate>
       
@@ -71,20 +89,20 @@
     </item>
     
     <item>
-      <title>Books</title>
-      <link>https://hengistwang.github.io/tags/books/</link>
-      <pubDate>Thu, 06 Jul 2023 00:00:00 +0800</pubDate>
-      
-      <guid>https://hengistwang.github.io/tags/books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Link</title>
+      <title>link</title>
       <link>https://hengistwang.github.io/tags/link/</link>
       <pubDate>Thu, 06 Jul 2023 00:00:00 +0800</pubDate>
       
       <guid>https://hengistwang.github.io/tags/link/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://hengistwang.github.io/tags/tools/</link>
+      <pubDate>Thu, 06 Jul 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://hengistwang.github.io/tags/tools/</guid>
       <description></description>
     </item>
     
@@ -98,7 +116,7 @@
     </item>
     
     <item>
-      <title>Gentoo</title>
+      <title>gentoo</title>
       <link>https://hengistwang.github.io/tags/gentoo/</link>
       <pubDate>Tue, 04 Jul 2023 00:00:00 +0800</pubDate>
       
@@ -107,7 +125,7 @@
     </item>
     
     <item>
-      <title>Linux</title>
+      <title>linux</title>
       <link>https://hengistwang.github.io/tags/linux/</link>
       <pubDate>Tue, 04 Jul 2023 00:00:00 +0800</pubDate>
       
@@ -125,7 +143,7 @@
     </item>
     
     <item>
-      <title>Lib</title>
+      <title>lib</title>
       <link>https://hengistwang.github.io/tags/lib/</link>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0800</pubDate>
       
@@ -134,7 +152,7 @@
     </item>
     
     <item>
-      <title>Load</title>
+      <title>load</title>
       <link>https://hengistwang.github.io/tags/load/</link>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0800</pubDate>
       

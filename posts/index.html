@@ -156,21 +156,32 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>sicp notes
+    <h2>Redis and Memcached
     </h2>
   </header>
   <div class="entry-content">
-    <p>At first this book talk about elements of programming is interesting
-primitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it’s interesting name.
-this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential....</p>
+    <p>Main difference Redis Memcached in-memory (except OOM or AOF/RDB enabled) data store and it is not volatile in-memory cache and it is volatile has data types no data types keys with a maximum size of 512MB and also values up to 512MB keys with a maximum size of 250B and values up to 1MB How Redis achieves persistence Redis supports persistence, thus it’s called a data store, in two different ways:...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-08-06 00:00:00 +0800 CST'>August 6, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to sicp notes" href="https://hengistwang.github.io/posts/12-sicp-notes/"></a>
+  <footer class="entry-footer"><span title='2023-09-17 00:00:00 +0800 CST'>September 17, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;hengist</footer>
+  <a class="entry-link" aria-label="post link to Redis and Memcached" href="https://hengistwang.github.io/posts/13_redis_and_memcached/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>one bug I encountered and some thoughts
+    <h2>SICP
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Building Abstractions with Procedures At first this book talk about elements of programming is interesting primitive expressions means of combination means of abstraction in this book we are going to use scheme language, and I use chicken interpreter, just because I like it’s interesting name.
+this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-08-06 00:00:00 +0800 CST'>August 6, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;hengist</footer>
+  <a class="entry-link" aria-label="post link to SICP" href="https://hengistwang.github.io/posts/12_sicp/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>One bug I encountered and some thoughts
     </h2>
   </header>
   <div class="entry-content">
@@ -179,7 +190,7 @@ finally I found the getenv system call returns char* and I compare it with a str
 This reminds me a book called Algorithms &#43; Data Structures = Programs....</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-30 00:00:00 +0800 CST'>July 30, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to one bug I encountered and some thoughts" href="https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/"></a>
+  <a class="entry-link" aria-label="post link to One bug I encountered and some thoughts" href="https://hengistwang.github.io/posts/11_one_bug_i_encountered_and_some_thoughts/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -191,7 +202,7 @@ This reminds me a book called Algorithms &#43; Data Structures = Programs....</p
     <p>Should I set default value when write a function, and where to set? In the declaration or the implementation the answer is in the declaration, and should in header file. In case of other part uses this function and not set a default value, if set a default value in the implementation, the other file included this file can’t know what default value is, and not able to compile it. For example...</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-27 00:00:00 +0800 CST'>July 27, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Default value of function" href="https://hengistwang.github.io/posts/10-default-value-of-function/"></a>
+  <a class="entry-link" aria-label="post link to Default value of function" href="https://hengistwang.github.io/posts/10_default_value_of_function/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -206,21 +217,7 @@ cryptography in history caesar cipher just brute-force attack
 #include &lt;cctype&gt; #include &lt;iostream&gt; using namespace std; void func(string s) { for (int i = 0; i &lt; 26; &#43;&#43;i) { string temp(s); for (auto &amp;c : temp) { c = tolower(c); c = ((c &#43; i) - 97) % 26 &#43; 97; } cout &lt;&lt; temp &lt;&lt; endl; } } int main() { string s; cin &gt;&gt; s; func(s); } simple substitution cipher Letter_frequency...</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-24 00:00:00 +0800 CST'>July 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to cryptography" href="https://hengistwang.github.io/posts/9-cryptography/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Git via HTTPS
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>It’s always frustrating to use Git because of some wall. I recently read a blog from manateelazycat, he suggests a way to use Git via HTTPS, just need to edit ~/.ssh/config and add the following config in it
-Host github.com Hostname ssh.github.com Port 443 User git Test it
-❯ ssh -T git@github.com Hi &lt;USERNAME&gt;! You&#39;ve successfully authenticated, but GitHub does not provide shell access. Git via HTTPS </p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-18 00:00:00 +0800 CST'>July 18, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Git via HTTPS" href="https://hengistwang.github.io/posts/8-git-via-https/"></a>
+  <a class="entry-link" aria-label="post link to cryptography" href="https://hengistwang.github.io/posts/9_cryptography/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.115.4"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.118.2"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -143,14 +143,28 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>name conflict multiple dynamic library
+    <h2>Git via HTTPS
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>It’s always frustrating to use Git because of some wall. I recently read a blog from manateelazycat, he suggests a way to use Git via HTTPS, just need to edit ~/.ssh/config and add the following config in it
+Host github.com Hostname ssh.github.com Port 443 User git Test it
+❯ ssh -T git@github.com Hi &lt;USERNAME&gt;! You&#39;ve successfully authenticated, but GitHub does not provide shell access. Git via HTTPS </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-18 00:00:00 +0800 CST'>July 18, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
+  <a class="entry-link" aria-label="post link to Git via HTTPS" href="https://hengistwang.github.io/posts/8_git_via_https/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>name conflict multiple libs
     </h2>
   </header>
   <div class="entry-content">
     <p>Here is the Question /*A.c*/ #include &lt;stdio.h&gt; int sayHi() { printf(&#34;Hi, this is AAAAA\n&#34;); return 0; } int sayOut() { sayHi(); printf(&#34;Use this to introduce AAAAA\n&#34;); return 0; } /*B.c*/ #include &lt;stdio.h&gt; int sayHi() { printf(&#34;Hi, this is BBBBB\n&#34;); return 0; } int sayOut() { sayHi(); printf(&#34;Use this to introduce BBBBB\n&#34;); return 0; } #include &lt;stdio.h&gt; extern int sayOut(); int main() { sayOut(); return 0; } # if link A first &gt;gcc test....</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0800 CST'>July 6, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to name conflict multiple dynamic library" href="https://hengistwang.github.io/posts/7-name-conflict-multiple-dynamic-library/"></a>
+  <a class="entry-link" aria-label="post link to name conflict multiple libs" href="https://hengistwang.github.io/posts/7_name_conflict_between_multiple_libs/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -163,7 +177,7 @@
 loginzlib​2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-06 00:00:00 +0800 CST'>July 6, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Zlib is still alive" href="https://hengistwang.github.io/posts/6-zlib-is-still-alive/"></a>
+  <a class="entry-link" aria-label="post link to Zlib is still alive" href="https://hengistwang.github.io/posts/6_zlib_is_still_alive/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -175,31 +189,19 @@ loginzlib​2vrak5zzpcocc3ouizykn6k5qecgj2tzlnab5wcbqhembyd.onion</p>
     <p>I am not recommended to build from scratch, there are several community driven configuration framework, like Doom Emacs Spacemacs… etc. I am highly recommend to use Doom Emacs, it’s very easy to install, just follow it’s Getting Started Guide After install it, open it and type spc&#43;f&#43;p to open config file, int the init.el ,we can Remove comments to enable some feature(make sure to execute doom sync to install the feature), like cc, python, and so many tools that can help us to do many things....</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-05 00:00:00 +0800 CST'>July 5, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Build IDE with emacs" href="https://hengistwang.github.io/posts/5-build-own-ide-with-emacs/"></a>
+  <a class="entry-link" aria-label="post link to Build IDE with emacs" href="https://hengistwang.github.io/posts/5_build_ide_with_emacs/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Why do I use Gentoo
+    <h2>Advantages using Gentoo
     </h2>
   </header>
   <div class="entry-content">
     <p>After using several Linux distributions, it hard for me to find one suit me well, I have been using openSUSE TW for about two years, it is an excellent system, help me and take care of all the miscellaneous. But when I started getting involved with Linux Kernel, I would like to try some interesting features like the musl libc and no-multilib system, and it is easy to customize my own system from kernel to software....</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-04 00:00:00 +0800 CST'>July 4, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Why do I use Gentoo" href="https://hengistwang.github.io/posts/4-why-do-i-use-gentoo/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Why we need enable_shared_from_this in cpp
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Problem class C : public enable_shared_from_this&lt;C&gt; { public: std::shared_ptr&lt;C&gt; func() { std::shared_ptr&lt;C&gt; local_sp_a(this); return local_sp_a; } }; int main() { C c; auto a = c.func(); return 0; } // Output: // ./a.out // double free or corruption (out) // fish: Job 1, &#39;./a.out&#39; terminated by signal SIGABRT (Abort) Why it is because when a shared_ptr was created, the control block was build up too, and there are three methods can create control block...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-03 00:00:00 +0800 CST'>July 3, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist</footer>
-  <a class="entry-link" aria-label="post link to Why we need enable_shared_from_this in cpp" href="https://hengistwang.github.io/posts/3-why-we-need-enable_shared_from_this-in-cpp/"></a>
+  <a class="entry-link" aria-label="post link to Advantages using Gentoo" href="https://hengistwang.github.io/posts/4_advantages_using_gentoo/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

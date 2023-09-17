@@ -7,8 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>sicp notes | Hengist</title>
 <meta name="keywords" content="scheme, sicp">
-<meta name="description" content="At first this book talk about elements of programming is interesting
-primitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it&rsquo;s interesting name.
+<meta name="description" content="Building Abstractions with Procedures At first this book talk about elements of programming is interesting primitive expressions means of combination means of abstraction in this book we are going to use scheme language, and I use chicken interpreter, just because I like it&rsquo;s interesting name.
 this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential.">
 <meta name="author" content="hengist">
 <link rel="canonical" href="https://hengistwang.github.io/posts/12-sicp-notes/">
@@ -59,18 +58,16 @@ this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name somet
 
     </style>
 </noscript><meta property="og:title" content="sicp notes" />
-<meta property="og:description" content="At first this book talk about elements of programming is interesting
-primitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it&rsquo;s interesting name.
+<meta property="og:description" content="Building Abstractions with Procedures At first this book talk about elements of programming is interesting primitive expressions means of combination means of abstraction in this book we are going to use scheme language, and I use chicken interpreter, just because I like it&rsquo;s interesting name.
 this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hengistwang.github.io/posts/12-sicp-notes/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-08-06T00:00:00+08:00" />
-<meta property="article:modified_time" content="2023-08-06T22:17:10+08:00" />
+<meta property="article:modified_time" content="2023-08-12T16:35:23+08:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="sicp notes"/>
-<meta name="twitter:description" content="At first this book talk about elements of programming is interesting
-primitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it&rsquo;s interesting name.
+<meta name="twitter:description" content="Building Abstractions with Procedures At first this book talk about elements of programming is interesting primitive expressions means of combination means of abstraction in this book we are going to use scheme language, and I use chicken interpreter, just because I like it&rsquo;s interesting name.
 this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential."/>
 
 
@@ -100,15 +97,15 @@ this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name somet
   "@type": "BlogPosting",
   "headline": "sicp notes",
   "name": "sicp notes",
-  "description": "At first this book talk about elements of programming is interesting\nprimitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it\u0026rsquo;s interesting name.\nthis language use prefix notation like this (+ 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential.",
+  "description": "Building Abstractions with Procedures At first this book talk about elements of programming is interesting primitive expressions means of combination means of abstraction in this book we are going to use scheme language, and I use chicken interpreter, just because I like it\u0026rsquo;s interesting name.\nthis language use prefix notation like this (+ 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential.",
   "keywords": [
     "scheme", "sicp"
   ],
-  "articleBody": "At first this book talk about elements of programming is interesting\nprimitive expressions means of combination means of abstraction in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it’s interesting name.\nthis language use prefix notation like this (+ 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential. a good question asked at the end of first class, what's the difference between the following two expressions (define a (* 5 5 )) (define (b) (* 5 5)) a ==\u003e 25 (a) ==\u003e Error: call of non-procedure: 25 b ==\u003e #",
-  "wordCount" : "149",
+  "articleBody": "Building Abstractions with Procedures At first this book talk about elements of programming is interesting primitive expressions means of combination means of abstraction in this book we are going to use scheme language, and I use chicken interpreter, just because I like it’s interesting name.\nthis language use prefix notation like this (+ 1 2 3 4 5 6 7 8 9) name something like value (define size 2) this associate the value 2 with the name size define procedure (define (suqare x) (* x x)) or (define square (lambda (x) (* x x)) this is some kind of syntactic sugar, but the lambda type is more essential. a good question asked at the end of first class, what's the difference between the following two expressions (define a (* 5 5 )) (define (b) (* 5 5)) a ==\u003e 25 (a) ==\u003e Error: call of non-procedure: 25 b ==\u003e #",
+  "wordCount" : "235",
   "inLanguage": "en",
   "datePublished": "2023-08-06T00:00:00+08:00",
-  "dateModified": "2023-08-06T22:17:10+08:00",
+  "dateModified": "2023-08-12T16:35:23+08:00",
   "author":[{
     "@type": "Person",
     "name": "hengist"
@@ -195,18 +192,39 @@ this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name somet
     <h1 class="post-title">
       sicp notes
     </h1>
-    <div class="post-meta"><span title='2023-08-06 00:00:00 +0800 CST'>August 6, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;hengist
+    <div class="post-meta"><span title='2023-08-06 00:00:00 +0800 CST'>August 6, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;hengist
 
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
 
-  <div class="post-content"><p>At first this book talk about elements of programming is interesting</p>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#building-abstractions-with-procedures" aria-label="Building Abstractions with Procedures">Building Abstractions with Procedures</a><ul>
+                        
+                <li>
+                    <a href="#at-first-this-book-talk-about-elements-of-programming-is-interesting" aria-label="At first this book talk about elements of programming is interesting">At first this book talk about elements of programming is interesting</a></li>
+                <li>
+                    <a href="#applicative-order-versus-normal-order" aria-label="applicative order versus normal order">applicative order versus normal order</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="building-abstractions-with-procedures">Building Abstractions with Procedures<a hidden class="anchor" aria-hidden="true" href="#building-abstractions-with-procedures">#</a></h2>
+<h3 id="at-first-this-book-talk-about-elements-of-programming-is-interesting">At first this book talk about elements of programming is interesting<a hidden class="anchor" aria-hidden="true" href="#at-first-this-book-talk-about-elements-of-programming-is-interesting">#</a></h3>
 <ul>
 <li>primitive expressions</li>
 <li>means of combination</li>
 <li>means of abstraction</li>
 </ul>
-<p>in this book we are gonna use scheme language, and i use chicken interpreter, just because i like it&rsquo;s interesting name.</p>
+<p>in this book we are going to use scheme language, and I use chicken interpreter, just because I like it&rsquo;s interesting name.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="line"><span class="cl"><span class="nv">this</span> <span class="nv">language</span> <span class="nv">use</span> <span class="nv">prefix</span> <span class="nv">notation</span> <span class="nv">like</span> <span class="nv">this</span>
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nv">name</span> <span class="nv">something</span> <span class="nv">like</span> <span class="nv">value</span>
@@ -226,7 +244,10 @@ this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name somet
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">a</span><span class="p">)</span> <span class="nv">==&gt;</span> <span class="nv">Error:</span> <span class="nv">call</span> <span class="nv">of</span> <span class="nv">non-procedure:</span> <span class="mi">25</span>
 </span></span><span class="line"><span class="cl"> <span class="nv">b</span>  <span class="nv">==&gt;</span> <span class="o">#</span><span class="nv">&lt;procedure</span> <span class="p">(</span><span class="nf">b</span><span class="p">)</span><span class="nv">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">b</span><span class="p">)</span> <span class="nv">==&gt;</span> <span class="mi">25</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><h3 id="applicative-order-versus-normal-order">applicative order versus normal order<a hidden class="anchor" aria-hidden="true" href="#applicative-order-versus-normal-order">#</a></h3>
+<p>&ldquo;fully expand and then reduce&rdquo; method is normal-order, and &ldquo;evaluate the arguments and then apply&rdquo; method is applicative-order evaluation, and the second method is the interpreter actually uses. partly because of the additional efficiency obtained from avoiding multiple evaluation of expressions, and more significantly, normal-order evaluation becomes much more complicated to deal with when we leave the realm of procedures that can be modeled by substitution.</p>
+<p>if you can name it, you have power of it</p>
+
 
   </div>
 
@@ -236,6 +257,11 @@ this language use prefix notation like this (&#43; 1 2 3 4 5 6 7 8 9) name somet
       <li><a href="https://hengistwang.github.io/tags/sicp/">sicp</a></li>
     </ul>
 <nav class="paginav">
+  <a class="prev" href="https://hengistwang.github.io/posts/13-redis-memcached/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Redis and Remcached</span>
+  </a>
   <a class="next" href="https://hengistwang.github.io/posts/11-one-bug-i-encountered-and-some-thoughts/">
     <span class="title">Next »</span>
     <br>
