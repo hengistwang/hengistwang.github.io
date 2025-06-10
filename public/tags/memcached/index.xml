@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Memcached on Hengist&#39;s site</title>
+    <link>http://localhost:1313/tags/memcached/</link>
+    <description>Recent content in Memcached on Hengist&#39;s site</description>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 20:47:05 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/memcached/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis and Memcached</title>
+      <link>http://localhost:1313/posts/13_redis_and_memcached/</link>
+      <pubDate>Sun, 17 Sep 2023 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/13_redis_and_memcached/</guid>
+      <description>&lt;h2 id=&#34;main-difference&#34;&gt;Main difference&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Redis&lt;/th&gt;
+          &lt;th&gt;Memcached&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;in-memory (except OOM or AOF/RDB enabled) data store and it is not volatile&lt;/td&gt;
+          &lt;td&gt;in-memory cache and it is volatile&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;has data types&lt;/td&gt;
+          &lt;td&gt;no data types&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;keys with a maximum size of 512MB and also values up to 512MB&lt;/td&gt;
+          &lt;td&gt;keys with a maximum size of 250B and values up to 1MB&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;how-redis-achieves-persistence&#34;&gt;How Redis achieves persistence&lt;/h2&gt;
+&lt;p&gt;Redis supports persistence, thus it’s called a data store, in two different ways:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

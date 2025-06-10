@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>C on Hengist&#39;s site</title>
+    <link>http://localhost:1313/tags/c/</link>
+    <description>Recent content in C on Hengist&#39;s site</description>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 20:46:55 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>One bug I encountered and some thoughts</title>
+      <link>http://localhost:1313/posts/11_one_bug_i_encountered_and_some_thoughts/</link>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/11_one_bug_i_encountered_and_some_thoughts/</guid>
+      <description>&lt;p&gt;I met a bug recently, it&amp;rsquo;s because I didn&amp;rsquo;t notice the return value of a system call, and use it directly, sadly the compiler not be able to identify this kind problem, until I run it, I notice the program will never enter one condition.&lt;/p&gt;
+&lt;p&gt;finally I found the getenv system call returns char* and I compare it with a string in C++, so this will not equal forever.&lt;/p&gt;
+&lt;p&gt;This reminds me a book called Algorithms + Data Structures = Programs. I must know what data structure I manipulated with. Under this promise, I will write good and correct programs. So deal with function input well is a good habit with doubt.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Default value of function</title>
+      <link>http://localhost:1313/posts/10_default_value_of_function/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/10_default_value_of_function/</guid>
+      <description>&lt;p&gt;Should I set default value when write a function, and where to set? In the declaration or the implementation
+the answer is in the declaration, and should in header file. In case of other part uses this function and not set a default value, if set a default value in the implementation, the other file included this file can&amp;rsquo;t know what default value is, and not able to compile it.
+For example&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

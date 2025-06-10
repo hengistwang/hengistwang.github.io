@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Proxy on Hengist&#39;s site</title>
+    <link>http://localhost:1313/tags/proxy/</link>
+    <description>Recent content in Proxy on Hengist&#39;s site</description>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 20:46:40 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git via HTTPS</title>
+      <link>http://localhost:1313/posts/8_git_via_https/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/8_git_via_https/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s always frustrating to use Git because of some wall. I recently read a blog from manateelazycat, he suggests a way to use Git via HTTPS,
+just need to edit ~/.ssh/config and add the following config in it&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;Host github.com
+Hostname ssh.github.com
+Port 443
+User git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Test it&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;❯ ssh -T git@github.com
+Hi &amp;lt;USERNAME&amp;gt;! You&amp;#39;ve successfully authenticated, but GitHub does not provide shell access.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://manateelazycat.github.io/2022/05/29/git-via-https/&#34;&gt;Git via HTTPS &lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

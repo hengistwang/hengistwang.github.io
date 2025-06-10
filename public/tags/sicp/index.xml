@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sicp on Hengist&#39;s site</title>
+    <link>http://localhost:1313/tags/sicp/</link>
+    <description>Recent content in Sicp on Hengist&#39;s site</description>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 20:47:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SICP</title>
+      <link>http://localhost:1313/posts/12_sicp/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/12_sicp/</guid>
+      <description>&lt;h2 id=&#34;building-abstractions-with-procedures&#34;&gt;Building Abstractions with Procedures&lt;/h2&gt;
+&lt;h3 id=&#34;at-first-this-book-talk-about-elements-of-programming-is-interesting&#34;&gt;At first this book talk about elements of programming is interesting&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;primitive expressions&lt;/li&gt;
+&lt;li&gt;means of combination&lt;/li&gt;
+&lt;li&gt;means of abstraction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;in this book we are going to use scheme language, and I use chicken interpreter, just because I like it&amp;rsquo;s interesting name.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-scheme&#34; data-lang=&#34;scheme&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;this language use prefix notation like this
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(+ &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;name something like value
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;define &lt;/span&gt;size &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;this associate the value &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; with the name size
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;define &lt;/span&gt;procedure
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;define &lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;suqare&lt;/span&gt; x) (* x x))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;or
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;define &lt;/span&gt;square (&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda &lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;x&lt;/span&gt;) (* x x))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;this is some kind of syntactic sugar, but the &lt;span style=&#34;color:#66d9ef&#34;&gt;lambda &lt;/span&gt;type is more essential&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a good question asked at the end of first class, what&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s&lt;/span&gt; the difference between the following two expressions
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;define &lt;/span&gt;a (* &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; ))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;define &lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;) (* &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; a  ==&amp;gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;) ==&amp;gt; Error: call of non-procedure: &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; b  ==&amp;gt; &lt;span style=&#34;color:#f92672&#34;&gt;#&lt;/span&gt;&amp;lt;procedure (&lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;)&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;) ==&amp;gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;applicative-order-versus-normal-order&#34;&gt;applicative order versus normal order&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;fully expand and then reduce&amp;rdquo; method is normal-order, and &amp;ldquo;evaluate the arguments and then apply&amp;rdquo; method is applicative-order evaluation, and the second method is the interpreter actually uses. partly because of the additional efficiency obtained from avoiding multiple evaluation of expressions, and more significantly, normal-order evaluation becomes much more complicated to deal with when we leave the realm of procedures that can be modeled by substitution.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

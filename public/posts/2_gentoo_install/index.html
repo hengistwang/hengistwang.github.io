@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Gentoo Install | Hengist&#39;s site</title>
+<meta name="keywords" content="gentoo, linux">
+<meta name="description" content="I. Prepare Disk
+#disk wipe
+sgdisk --zap-all /dev/sda
+#partition disk
+cfdisk -z /dev/sda
+mkfs.vfat -F 32 /dev/sda1
+mkfs.btrfs/ext4/xfs/.... /dev/sda3
+mkswap /dev/sda2
+swapon /dev/sda2
+#then mount them
+II. Installing stage3
+Download the stage3 from Gentoo&rsquo;s website and put it in the /mnt/gentoo
+# unpack it
+tar xpvf stage3-*.tar.xz --xattrs-include=&#39;*.*&#39; --numeric-owner
+# get the portage config from my own git repo
+# and set fstab
+genfstab -U /mnt/gentoo &gt;&gt; /mnt/gentoo/etc/fstab
+# then config repos.conf:
+mkdir --parents /mnt/gentoo/etc/portage/repos.conf
+cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf
+# Copy DNS info
+cp --dereference /etc/resolv.conf /mnt/gentoo/etc/
+# Mounting the necessary filesystems
+mount --types proc /proc /mnt/gentoo/proc
+mount --rbind /sys /mnt/gentoo/sys
+mount --make-rslave /mnt/gentoo/sys
+mount --rbind /dev /mnt/gentoo/dev
+mount --make-rslave /mnt/gentoo/dev
+mount --bind /run /mnt/gentoo/run
+mount --make-slave /mnt/gentoo/run
+# chroot
+chroot /mnt/gentoo /bin/bash
+source /etc/profile
+export PS1=&#34;(chroot) ${PS1}&#34;
+# make sure all partition are mounted correct
+emerge --sync
+#set profle
+eselect profile list
+eselect profile set X
+# config ccache before this step
+emerge -auvDN --with-bdeps=y --autounmask-write @world
+add ccache">
+<meta name="author" content="hengist">
+<link rel="canonical" href="http://localhost:1313/posts/2_gentoo_install/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2_gentoo_install/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Hengist&#39;s site (Alt + H)">Hengist&#39;s site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Gentoo Install
+    </h1>
+    <div class="post-meta"><span title='2023-07-02 00:00:00 +0800 CST'>July 2, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;hengist
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#i-dot-prepare-disk" aria-label="I. Prepare Disk">I. Prepare Disk</a></li>
+                <li>
+                    <a href="#ii-dot-installing-stage3" aria-label="II. Installing stage3">II. Installing stage3</a></li>
+                <li>
+                    <a href="#iii-dot-post-configure" aria-label="III. Post configure">III. Post configure</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="i-dot-prepare-disk">I. Prepare Disk<a hidden class="anchor" aria-hidden="true" href="#i-dot-prepare-disk">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#disk wipe</span>
+</span></span><span style="display:flex;"><span>sgdisk --zap-all /dev/sda
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#partition disk</span>
+</span></span><span style="display:flex;"><span>cfdisk -z /dev/sda
+</span></span><span style="display:flex;"><span>mkfs.vfat -F <span style="color:#ae81ff">32</span> /dev/sda1
+</span></span><span style="display:flex;"><span>mkfs.btrfs/ext4/xfs/.... /dev/sda3
+</span></span><span style="display:flex;"><span>mkswap /dev/sda2
+</span></span><span style="display:flex;"><span>swapon /dev/sda2
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#then mount them</span>
+</span></span></code></pre></div><h2 id="ii-dot-installing-stage3">II. Installing stage3<a hidden class="anchor" aria-hidden="true" href="#ii-dot-installing-stage3">#</a></h2>
+<p>Download the stage3 from Gentoo&rsquo;s website and put it in the /mnt/gentoo</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># unpack it</span>
+</span></span><span style="display:flex;"><span>tar xpvf stage3-*.tar.xz --xattrs-include<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*.*&#39;</span> --numeric-owner
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># get the portage config from my own git repo</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># and set fstab</span>
+</span></span><span style="display:flex;"><span>genfstab -U /mnt/gentoo &gt;&gt; /mnt/gentoo/etc/fstab
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># then config repos.conf:</span>
+</span></span><span style="display:flex;"><span>mkdir --parents /mnt/gentoo/etc/portage/repos.conf
+</span></span><span style="display:flex;"><span>cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy DNS info</span>
+</span></span><span style="display:flex;"><span>cp --dereference /etc/resolv.conf /mnt/gentoo/etc/
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mounting the necessary filesystems</span>
+</span></span><span style="display:flex;"><span>mount --types proc /proc /mnt/gentoo/proc
+</span></span><span style="display:flex;"><span>mount --rbind /sys /mnt/gentoo/sys
+</span></span><span style="display:flex;"><span>mount --make-rslave /mnt/gentoo/sys
+</span></span><span style="display:flex;"><span>mount --rbind /dev /mnt/gentoo/dev
+</span></span><span style="display:flex;"><span>mount --make-rslave /mnt/gentoo/dev
+</span></span><span style="display:flex;"><span>mount --bind /run /mnt/gentoo/run
+</span></span><span style="display:flex;"><span>mount --make-slave /mnt/gentoo/run
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># chroot</span>
+</span></span><span style="display:flex;"><span>chroot /mnt/gentoo /bin/bash
+</span></span><span style="display:flex;"><span>source /etc/profile
+</span></span><span style="display:flex;"><span>export PS1<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(chroot) </span><span style="color:#e6db74">${</span>PS1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># make sure all partition are mounted correct</span>
+</span></span><span style="display:flex;"><span>emerge --sync
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#set profle</span>
+</span></span><span style="display:flex;"><span>eselect profile list
+</span></span><span style="display:flex;"><span>eselect profile set X
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># config ccache before this step</span>
+</span></span><span style="display:flex;"><span>emerge -auvDN --with-bdeps<span style="color:#f92672">=</span>y --autounmask-write @world
+</span></span></code></pre></div><p>add ccache</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>emerge -av dev-util/ccache
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#config ccache</span>
+</span></span><span style="display:flex;"><span>mkdir -p /var/cache/ccache
+</span></span><span style="display:flex;"><span>chown root:portage -R /var/cache/ccache
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">2775</span> -R /var/cache/ccache
+</span></span></code></pre></div><p>Then edit /var/cache/ccache/ccache.conf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>max_size = 512.0G
+</span></span><span style="display:flex;"><span>umask = 002
+</span></span><span style="display:flex;"><span>hash_dir = false
+</span></span><span style="display:flex;"><span>compiler_check = %compiler% -v
+</span></span><span style="display:flex;"><span>cache_dir_levels = 3
+</span></span><span style="display:flex;"><span>compression = true
+</span></span><span style="display:flex;"><span>compression_level = 1
+</span></span></code></pre></div><h2 id="iii-dot-post-configure">III. Post configure<a hidden class="anchor" aria-hidden="true" href="#iii-dot-post-configure">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ln -sf ../usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;en_US.UTF-8 UTF-8
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">zh_CN.UTF-8 UTF-8&#34;</span> &gt;&gt; /etc/locale.gen
+</span></span><span style="display:flex;"><span>locale-gen
+</span></span><span style="display:flex;"><span>eselect locale list
+</span></span><span style="display:flex;"><span>eselect locale set X
+</span></span><span style="display:flex;"><span>emerge -av sys-fs/btrfs-progs networkmanager app-admin/sysklogd sys-process/cronie sudo grub dev-vcs/git
+</span></span><span style="display:flex;"><span>systemctl enable NetworkManager
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;s/\# \%wheel ALL=(ALL) ALL/\%wheel ALL=(ALL) ALL/g&#39;</span> /etc/sudoers
+</span></span><span style="display:flex;"><span>passwd root
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># add GRUB_DISABLE_OS_PROBER=false to the end of /etc/default/grub</span>
+</span></span><span style="display:flex;"><span>ln -sf /proc/self/mounts /etc/mtab
+</span></span><span style="display:flex;"><span>systemd-machine-id-setup
+</span></span><span style="display:flex;"><span>emerge -av sys-kernel/gentoo-kernel-bin
+</span></span><span style="display:flex;"><span>eselect kernel list
+</span></span><span style="display:flex;"><span>eselect kernel set X
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># add use initramfs in linux-firmware</span>
+</span></span><span style="display:flex;"><span>emerge -av genkernel linux-firmware
+</span></span><span style="display:flex;"><span>genkernel --install --compress-initramfs-type<span style="color:#f92672">=</span>zstd initramfs
+</span></span><span style="display:flex;"><span>grub-install --target<span style="color:#f92672">=</span>x86_64-efi --efi-directory<span style="color:#f92672">=</span>/boot --bootloader-id<span style="color:#f92672">=</span>Gentoo
+</span></span><span style="display:flex;"><span>grub-mkconfig -o /boot/grub/grub.cfg
+</span></span><span style="display:flex;"><span>emerge -av kde-plasma/plasma-meta xorg-server xf86-video-amdgpu media-fonts/noto
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/gentoo/">Gentoo</a></li>
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/3_what_is_enable_shared_from_this_in_cpp/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>What is enable_shared_from_this in cpp</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/1_link_load_lib/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Link Load Lib</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Hengist&#39;s site</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

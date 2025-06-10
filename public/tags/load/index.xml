@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Load on Hengist&#39;s site</title>
+    <link>http://localhost:1313/tags/load/</link>
+    <description>Recent content in Load on Hengist&#39;s site</description>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 20:45:52 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/load/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Link Load Lib</title>
+      <link>http://localhost:1313/posts/1_link_load_lib/</link>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/1_link_load_lib/</guid>
+      <description>&lt;h2 id=&#34;chap-i&#34;&gt;Chap I&lt;/h2&gt;
+&lt;h2 id=&#34;chap-ii&#34;&gt;Chap II&lt;/h2&gt;
+&lt;h3 id=&#34;preprocessing&#34;&gt;Preprocessing&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -E src.c -o src.i
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This operation did several things.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;processing all the instructions begin with &amp;lsquo;#&amp;rsquo;, delete all of them except &amp;lsquo;#pragma&amp;rsquo;, and process the &amp;lsquo;#include&amp;rsquo; recursively.&lt;/li&gt;
+&lt;li&gt;delete all comments.&lt;/li&gt;
+&lt;li&gt;add line number and file name identifiers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;compile&#34;&gt;Compile&lt;/h3&gt;
+&lt;p&gt;to assembly code&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -S src.i -o src.s
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -S src.c -o src.s
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ccl src.c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;assembly&#34;&gt;Assembly&lt;/h3&gt;
+&lt;p&gt;to machine code&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;as src.s -o src.o
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -c src.s -o src.o
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -c src.c -o src.o
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;link&#34;&gt;Link&lt;/h3&gt;
+&lt;p&gt;to executable program&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
