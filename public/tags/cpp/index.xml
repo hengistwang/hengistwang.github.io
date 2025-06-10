@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Cpp on Hengist&#39;s site</title>
-    <link>http://localhost:1313/tags/cpp/</link>
+    <link>https://hengistwang.github.io/tags/cpp/</link>
     <description>Recent content in Cpp on Hengist&#39;s site</description>
     <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Jun 2025 20:46:16 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hengistwang.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is enable_shared_from_this in cpp</title>
-      <link>http://localhost:1313/posts/3_what_is_enable_shared_from_this_in_cpp/</link>
+      <link>https://hengistwang.github.io/posts/3_what_is_enable_shared_from_this_in_cpp/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/3_what_is_enable_shared_from_this_in_cpp/</guid>
+      <guid>https://hengistwang.github.io/posts/3_what_is_enable_shared_from_this_in_cpp/</guid>
       <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;C&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; enable_shared_from_this&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;C&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;

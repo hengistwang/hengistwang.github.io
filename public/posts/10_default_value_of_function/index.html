@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Default value of function | Hengist&#39;s site</title>
 <meta name="keywords" content="c">
 <meta name="description" content="Should I set default value when write a function, and where to set? In the declaration or the implementation
 the answer is in the declaration, and should in header file. In case of other part uses this function and not set a default value, if set a default value in the implementation, the other file included this file can&rsquo;t know what default value is, and not able to compile it.
 For example">
 <meta name="author" content="hengist">
-<link rel="canonical" href="http://localhost:1313/posts/10_default_value_of_function/">
+<link rel="canonical" href="https://hengistwang.github.io/posts/10_default_value_of_function/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://hengistwang.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hengistwang.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hengistwang.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://hengistwang.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://hengistwang.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/10_default_value_of_function/">
+<link rel="alternate" hreflang="en" href="https://hengistwang.github.io/posts/10_default_value_of_function/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,7 +57,76 @@ For example">
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://hengistwang.github.io/posts/10_default_value_of_function/">
+  <meta property="og:site_name" content="Hengist&#39;s site">
+  <meta property="og:title" content="Default value of function">
+  <meta property="og:description" content="Should I set default value when write a function, and where to set? In the declaration or the implementation the answer is in the declaration, and should in header file. In case of other part uses this function and not set a default value, if set a default value in the implementation, the other file included this file can’t know what default value is, and not able to compile it. For example">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-07-27T00:00:00+08:00">
+    <meta property="article:modified_time" content="2025-06-10T20:46:52+08:00">
+    <meta property="article:tag" content="C">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Default value of function">
+<meta name="twitter:description" content="Should I set default value when write a function, and where to set? In the declaration or the implementation
+the answer is in the declaration, and should in header file. In case of other part uses this function and not set a default value, if set a default value in the implementation, the other file included this file can&rsquo;t know what default value is, and not able to compile it.
+For example">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://hengistwang.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Default value of function",
+      "item": "https://hengistwang.github.io/posts/10_default_value_of_function/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Default value of function",
+  "name": "Default value of function",
+  "description": "Should I set default value when write a function, and where to set? In the declaration or the implementation the answer is in the declaration, and should in header file. In case of other part uses this function and not set a default value, if set a default value in the implementation, the other file included this file can\u0026rsquo;t know what default value is, and not able to compile it. For example\n",
+  "keywords": [
+    "c"
+  ],
+  "articleBody": "Should I set default value when write a function, and where to set? In the declaration or the implementation the answer is in the declaration, and should in header file. In case of other part uses this function and not set a default value, if set a default value in the implementation, the other file included this file can’t know what default value is, and not able to compile it. For example\n//*.h int add(int a, int b); //*.cc int add(int a = 1, int b = 1) { return a + b; } // test.cc #include \"a.h\" #include using namespace std; int main() { cout \u003c\u003c add(1) \u003c\u003c endl; ; } ❯ g++ test.cc -L. -la test.cc: In function ‘int main()’: test.cc:6:16: error: too few arguments to function ‘int add(int, int)’ 6 | cout \u003c\u003c add(1)\u003c\u003c endl;; | ~~~^~~ In file included from test.cc:1: a.h:1:5: note: declared here 1 | int add(int a , int b ); | ^~~ in the above program, test.cc include a.h, but default value is not set in the header file, when compile test.cc, the compiler will require add function two parameters, but only one is here, so it will not be able to compile.\n",
+  "wordCount" : "202",
+  "inLanguage": "en",
+  "datePublished": "2023-07-27T00:00:00+08:00",
+  "dateModified": "2025-06-10T20:46:52+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "hengist"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hengistwang.github.io/posts/10_default_value_of_function/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hengist's site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hengistwang.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -75,7 +144,7 @@ For example">
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Hengist&#39;s site (Alt + H)">Hengist&#39;s site</a>
+            <a href="https://hengistwang.github.io/" accesskey="h" title="Hengist&#39;s site (Alt + H)">Hengist&#39;s site</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -101,17 +170,17 @@ For example">
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/archives" title="Archive">
+                <a href="https://hengistwang.github.io/archives" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://hengistwang.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://hengistwang.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -122,7 +191,7 @@ For example">
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://hengistwang.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://hengistwang.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Default value of function
     </h1>
@@ -162,15 +231,15 @@ For example</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/c/">C</a></li>
+      <li><a href="https://hengistwang.github.io/tags/c/">C</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/11_one_bug_i_encountered_and_some_thoughts/">
+  <a class="prev" href="https://hengistwang.github.io/posts/11_one_bug_i_encountered_and_some_thoughts/">
     <span class="title">« Prev</span>
     <br>
     <span>One bug I encountered and some thoughts</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/9_cryptography/">
+  <a class="next" href="https://hengistwang.github.io/posts/9_cryptography/">
     <span class="title">Next »</span>
     <br>
     <span>cryptography</span>
@@ -182,7 +251,7 @@ For example</p>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Hengist&#39;s site</a></span> · 
+        <span>&copy; 2025 <a href="https://hengistwang.github.io/">Hengist&#39;s site</a></span> · 
 
     <span>
         Powered by

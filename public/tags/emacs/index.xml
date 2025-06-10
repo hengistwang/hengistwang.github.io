@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Emacs on Hengist&#39;s site</title>
-    <link>http://localhost:1313/tags/emacs/</link>
+    <link>https://hengistwang.github.io/tags/emacs/</link>
     <description>Recent content in Emacs on Hengist&#39;s site</description>
     <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Jun 2025 20:46:25 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hengistwang.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Build IDE with emacs</title>
-      <link>http://localhost:1313/posts/5_build_ide_with_emacs/</link>
+      <link>https://hengistwang.github.io/posts/5_build_ide_with_emacs/</link>
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/5_build_ide_with_emacs/</guid>
+      <guid>https://hengistwang.github.io/posts/5_build_ide_with_emacs/</guid>
       <description>&lt;p&gt;I am not recommended to build from scratch, there are several community driven configuration framework, like Doom Emacs Spacemacs&amp;hellip; etc. I am highly recommend to use &lt;a href=&#34;https://github.com/doomemacs/doomemacs&#34;&gt;Doom Emacs&lt;/a&gt;, it&amp;rsquo;s very easy to install, just follow it&amp;rsquo;s &lt;a href=&#34;https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org&#34;&gt;Getting Started Guide&lt;/a&gt;
 After install it, open it and type spc+f+p to open config file, int the init.el ,we can Remove comments to enable some feature(make sure to execute doom sync to install the feature), like cc, python, and so many tools that can help us to do many things.&lt;/p&gt;</description>
     </item>

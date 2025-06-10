@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Redis on Hengist&#39;s site</title>
-    <link>http://localhost:1313/tags/redis/</link>
+    <link>https://hengistwang.github.io/tags/redis/</link>
     <description>Recent content in Redis on Hengist&#39;s site</description>
     <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Jun 2025 20:47:05 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hengistwang.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redis and Memcached</title>
-      <link>http://localhost:1313/posts/13_redis_and_memcached/</link>
+      <link>https://hengistwang.github.io/posts/13_redis_and_memcached/</link>
       <pubDate>Sun, 17 Sep 2023 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/13_redis_and_memcached/</guid>
+      <guid>https://hengistwang.github.io/posts/13_redis_and_memcached/</guid>
       <description>&lt;h2 id=&#34;main-difference&#34;&gt;Main difference&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;

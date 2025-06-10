@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Redis and Memcached | Hengist&#39;s site</title>
 <meta name="keywords" content="redis, memcached">
 <meta name="description" content="Main difference
@@ -33,16 +33,16 @@
 How Redis achieves persistence
 Redis supports persistence, thus it’s called a data store, in two different ways:">
 <meta name="author" content="hengist">
-<link rel="canonical" href="http://localhost:1313/posts/13_redis_and_memcached/">
+<link rel="canonical" href="https://hengistwang.github.io/posts/13_redis_and_memcached/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://hengistwang.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hengistwang.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hengistwang.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://hengistwang.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://hengistwang.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/13_redis_and_memcached/">
+<link rel="alternate" hreflang="en" href="https://hengistwang.github.io/posts/13_redis_and_memcached/">
 <noscript>
     <style>
         #theme-toggle,
@@ -79,7 +79,99 @@ Redis supports persistence, thus it’s called a data store, in two different wa
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://hengistwang.github.io/posts/13_redis_and_memcached/">
+  <meta property="og:site_name" content="Hengist&#39;s site">
+  <meta property="og:title" content="Redis and Memcached">
+  <meta property="og:description" content="Main difference Redis Memcached in-memory (except OOM or AOF/RDB enabled) data store and it is not volatile in-memory cache and it is volatile has data types no data types keys with a maximum size of 512MB and also values up to 512MB keys with a maximum size of 250B and values up to 1MB How Redis achieves persistence Redis supports persistence, thus it’s called a data store, in two different ways:">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-09-17T00:00:00+08:00">
+    <meta property="article:modified_time" content="2025-06-10T20:47:05+08:00">
+    <meta property="article:tag" content="Redis">
+    <meta property="article:tag" content="Memcached">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Redis and Memcached">
+<meta name="twitter:description" content="Main difference
+
+  
+      
+          Redis
+          Memcached
+      
+  
+  
+      
+          in-memory (except OOM or AOF/RDB enabled) data store and it is not volatile
+          in-memory cache and it is volatile
+      
+      
+          has data types
+          no data types
+      
+      
+          keys with a maximum size of 512MB and also values up to 512MB
+          keys with a maximum size of 250B and values up to 1MB
+      
+  
+
+How Redis achieves persistence
+Redis supports persistence, thus it’s called a data store, in two different ways:">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://hengistwang.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Redis and Memcached",
+      "item": "https://hengistwang.github.io/posts/13_redis_and_memcached/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Redis and Memcached",
+  "name": "Redis and Memcached",
+  "description": "Main difference Redis Memcached in-memory (except OOM or AOF/RDB enabled) data store and it is not volatile in-memory cache and it is volatile has data types no data types keys with a maximum size of 512MB and also values up to 512MB keys with a maximum size of 250B and values up to 1MB How Redis achieves persistence Redis supports persistence, thus it’s called a data store, in two different ways:\n",
+  "keywords": [
+    "redis", "memcached"
+  ],
+  "articleBody": "Main difference Redis Memcached in-memory (except OOM or AOF/RDB enabled) data store and it is not volatile in-memory cache and it is volatile has data types no data types keys with a maximum size of 512MB and also values up to 512MB keys with a maximum size of 250B and values up to 1MB How Redis achieves persistence Redis supports persistence, thus it’s called a data store, in two different ways:\nRDB snapshot: Is a point-in-time snapshot of all your dataset, that is stored in a file in disk and performed at specified intervals. This way, the dataset can be restored on startup.\nAOF log: Is an Append Only File log of all the write commands performed in the Redis server. This file is also stored in disk, so by re-running all the commands in their order, a dataset can be restored on startup.\nThese files are handled by a child process and this is a key factor in deciding which kind of persistence to use.\nIf the dataset stored in Redis is too big, the RDB file will take some time to be created, which has an impact on the response time. On the other hand, it will be faster to load on boot up compared to the AOF log.\nThe AOF log is better if data loss is not acceptable at all, as it can be updated at every command. It also has no corruption issues since it’s an append-only file. However, it can grow much larger than an RDB snapshot\nHow to Choose Just it’s important to consider its pros and cons right from the beginning to avoid changes and migrations during the project.\nRef:Redis vs Memcached: which one to choose?\n",
+  "wordCount" : "284",
+  "inLanguage": "en",
+  "datePublished": "2023-09-17T00:00:00+08:00",
+  "dateModified": "2025-06-10T20:47:05+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "hengist"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hengistwang.github.io/posts/13_redis_and_memcached/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hengist's site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hengistwang.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -97,7 +189,7 @@ Redis supports persistence, thus it’s called a data store, in two different wa
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Hengist&#39;s site (Alt + H)">Hengist&#39;s site</a>
+            <a href="https://hengistwang.github.io/" accesskey="h" title="Hengist&#39;s site (Alt + H)">Hengist&#39;s site</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -123,17 +215,17 @@ Redis supports persistence, thus it’s called a data store, in two different wa
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/archives" title="Archive">
+                <a href="https://hengistwang.github.io/archives" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://hengistwang.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://hengistwang.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -144,7 +236,7 @@ Redis supports persistence, thus it’s called a data store, in two different wa
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="https://hengistwang.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://hengistwang.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Redis and Memcached
     </h1>
@@ -221,11 +313,11 @@ Redis supports persistence, thus it’s called a data store, in two different wa
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/redis/">Redis</a></li>
-      <li><a href="http://localhost:1313/tags/memcached/">Memcached</a></li>
+      <li><a href="https://hengistwang.github.io/tags/redis/">Redis</a></li>
+      <li><a href="https://hengistwang.github.io/tags/memcached/">Memcached</a></li>
     </ul>
 <nav class="paginav">
-  <a class="next" href="http://localhost:1313/posts/12_sicp/">
+  <a class="next" href="https://hengistwang.github.io/posts/12_sicp/">
     <span class="title">Next »</span>
     <br>
     <span>SICP</span>
@@ -237,7 +329,7 @@ Redis supports persistence, thus it’s called a data store, in two different wa
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Hengist&#39;s site</a></span> · 
+        <span>&copy; 2025 <a href="https://hengistwang.github.io/">Hengist&#39;s site</a></span> · 
 
     <span>
         Powered by
